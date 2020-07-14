@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tarea 9</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<a href="index.html"><h1>Índice</h1></a>
+	<br><hr>
+	<script>
+				//Iniciamos el ciclo DO-WHILE
+	         do{
+	         	//Primero preguntamos el año de nacimiento y a la vez lo guardamos en una variable en tipo INT
+	         	aNac=parseInt(prompt("Indique su año de nacimiento)"));
+
+	         	//Usamos una secuencia ciclica de IF-ELSE, para cada generación
+	         	if (aNac >= 1994 && aNac<=2010) {
+	         		alert("Generación Z");
+	         	}else if (aNac >= 1981 && aNac <=1993) {
+	         		alert("Gerneración Y");
+	         	}else if (aNac >= 1969 && aNac <=1980) {
+	         		alert("Gerneración x");
+	         	}else if (aNac >= 1949 && aNac <=1968) {
+	         		alert("Gerneración Babby Boom");
+	         	}else{
+	         		alert("Año de nacimiento inválido");
+	         	}
+
+	         	//Usamos un alert de Confirmación para saber si se desea seguir sabiendo informacion con diferente año
+	         	conf=confirm("¿Desea Ingresar otro año?"); 
+
+	         }while(conf==true); //Usamos la confirmacion del alert para saber si seguimos con el ciclo DO-WHILE o si se termina
+
+	</script>	
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tarea 8</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<a href="index.html"><h1>Índice</h1></a>
+	<br><hr>
+	<script>
+		//Usamos el confirm para guardar la confirmacion del mensaje en la variable "helado" para despues poder inicializar el If con las //opciones
+		helado=confirm("¿Desea algun topping en su helado?\n(Helado sin topping $20.00)");
+
+		extra=0; //Inicializamos las variables
+		np=20; //np = no topping, este vale $20
+
+
+	    if (helado == true) { //Iniciamos el ciclo IF con la confirmacion del primer alert
+
+	    	//Iniciamos un Do-While
+	         do{
+	         	//Mandamos un mensaje para saber que topping va a querer el usuario
+	         	//Usamos el parseInt para que lo guarde en entero la opcion
+	         	topp=parseInt(prompt("Indique el topping que desea agregar\n"+
+	         		"1. Oreo ($10.00 extra) \n2. KitKat ($15.00 extra) \n3. Cajeta ($10.00 extra) \n4. ChocoNuez ($20.00 extra)"));
+
+	         	switch(topp){ //ejecutamos un SWITCH para saber los costos de cada topping
+	         		case 1: 
+	         				extra = 10;
+	         				break;
+	         		case 2: 
+	         				extra = 15;
+	         				break;
+	         		case 3: 
+	         				extra = 10;
+	         				break;
+	         		case 4: 
+	         				extra = 20;
+	         				break;
+	         		default:
+	         				alert("Topping incorrecto");
+	         	}
+
+	         	np=np+extra; //Aqui sumamos el costo del al costo del Helado
+
+	         	conf=confirm("¿Desea otro topping?"); //Usamos otra alerta de confirmacion para saber si desea agragar otro topping
+	         											//Esta confirmación la vamos a usar para saber cuando parar el ciclo Do-While
+
+	         }while(conf==true); //La condicion para saber si continuará el ciclo
+
+	        document.write("El total es: $"+np); //Aqui fuera del ciclo DO-WHILE se imprime el precio final del Helado
+
+		} else { //(Else del ciclo IF)
+
+		    document.write("El total es: $"+np); //Aqui se imprime el precio del Helado sin topping
+		}
+	
+
+	</script>	
+</body>
+</html>

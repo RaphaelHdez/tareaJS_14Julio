@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tarea 6</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<a href="index.html"><h1>Índice</h1></a>
+	<br><hr>
+	<script>
+
+		cont=0; //El contador donde se va guardar cada la cantidad de nuv¿meros pares
+		sum=0; //Acumulador donde ira sumando los numeros pares
+
+		for (i=1; i<=100; i++ ){ //Se inicia el ciclo for
+
+			if (i %2 == 0) { //IF que validará que el numero sea par usando el operador MOD (%)
+				
+				document.write("\nEl número "+ i+ " es par <br>"); //Impresión del mensaje
+
+				cont++; //contador en uso
+				sum=i+sum; //acumulador en uso
+			}
+			
+		}
+		document.write("Son "+cont+ " números <br>"); //mensajes de salida de contador
+		document.write("La suma total de esos números es: "+sum); //mensaje de salida del acomulador
+	</script>	
+</body>
+</html>

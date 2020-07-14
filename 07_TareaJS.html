@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tarea 7</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<a href="index.html"><h1>Índice</h1></a>
+	<br><hr>
+
+	<script>
+		//Se pide ingresar el sueldo, usamos parseInt para declarar que será un entero lo que se ingresará
+		sueldo=parseInt(prompt("¿Cuál es tu sueldo?")); 
+		//Se pide ingresar la categoria, usamos parseInt para declarar que será un entero lo que se ingresará
+		cate= parseInt(prompt("Que categoria de empleado eres? (1, 2, 3 o 4)"));
+
+		switch (cate){ //Para este ejercicio decidí usar un SWITCH
+		//Evaluamos la categoria ingresada para continuar con el procedimiento del sueldo
+
+			case 1: //En caso de que la categoria sea 1
+				document.write("Su categoria es 1 <br>");
+				sueldo=sueldo+(sueldo*.15);
+				document.write("Su sueldo con aumento es: $"+sueldo);
+				break;
+
+			case 2: //En caso de que la categoria sea 2
+				document.write("Su categoria es 2 <br>");
+				sueldo=sueldo+(sueldo*.10);
+				document.write("Su sueldo con aumento es: $"+sueldo);
+				break;
+
+			case 3: //En caso de que la categoria sea 3
+				document.write("Su categoria es 3 <br>");
+				sueldo=sueldo+(sueldo*.08);
+				document.write("Su sueldo con aumento es: $"+sueldo);
+				break;
+
+			case 4: //En caso de que la categoria sea 4
+				document.write("Su categoria es 4 <br>");
+				sueldo=sueldo+(sueldo*.07);
+				document.write("Su sueldo con aumento es: $"+sueldo);
+				break;
+
+			default:  //Un caso default por si se ingresa un número que NO sea 1, 2, 3 o 4
+				document.write("Categoria incorrecta");
+				break;
+
+		}
+		
+	</script>	
+</body>
+</html>

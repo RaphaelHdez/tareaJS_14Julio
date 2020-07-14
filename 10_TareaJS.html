@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tarea 10</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<a href="index.html"><h1>Índice</h1></a>
+	<br><hr>
+	<script>
+
+			opc=prompt("¿Desea viajar?"); //preguntamos si desea viajar
+
+			do{ //e Iniciamos un ciclo DO-WHILE
+				
+				if (opc.toUpperCase() == 'SI') { //Usamos la respues para saber si introdujo SI o NO
+					//Usé el toUpperCase() para que la respuesta la convierta en mayusculas y asi evitar que el programa //crashé
+
+					mes=prompt("¿En qué mes desea viajar?"); //Aqui preguntamos por el mes
+
+					switch (mes.toUpperCase()){ //y evaluamos el mes en un ciclo SWITCH, usé tambien el metodo toUpperCase //por el mismo motivo
+
+						case 'ENERO': 
+						case 'FEBRERO': 
+						case 'MARZO': 
+						case 'ABRIL': 
+						case 'MAYO': 
+						case 'JUNIO':
+						case 'JULIO': 
+							alert("Cancún | $7,000.00\nDisneylandia | $12,000.00\nIxtapa | $5,000.00\nLas Vegas | $12,000.00"); //La alerta con la info para los primeros 7 casos/meses
+							break;
+
+						case 'AGOSTO':
+						case 'SEPTIEMBRE': 
+						case 'OCTUBRE': 
+						case 'NOVIEMBRE': 
+						case 'DICIEMBRE': 
+							alert("Cancún | $10,000.00\nDisneylandia | $20,000.00\nIxtapa | $8,000.00\nLas Vegas | $18,000.00"); //La alerta para los casos/meses restantes
+							break;
+
+						default: alert("Mes introducido incorrectamente");
+							break;
+/*
+	<ejemplo switch completo>
+						case 'ENERO': 
+							alert("Cancún | $10,000.00\nDisneylandia | $20,000.00\nIxtapa | $8,000.00\nLas Vegas | $18,000.00");
+							break;
+
+						case 'FEBRERO': 
+							alert("Cancún | $10,000.00\nDisneylandia | $20,000.00\nIxtapa | $8,000.00\nLas Vegas | $18,000.00");
+							break;
+
+						case 'MARZO': 
+							alert("Cancún | $10,000.00\nDisneylandia | $20,000.00\nIxtapa | $8,000.00\nLas Vegas | $18,000.00");
+							break;
+
+						case 'ABRIL': 
+							alert("Cancún | $10,000.00\nDisneylandia | $20,000.00\nIxtapa | $8,000.00\nLas Vegas | $18,000.00");
+							break;
+
+						case 'MAYO': 
+							alert("Cancún | $10,000.00\nDisneylandia | $20,000.00\nIxtapa | $8,000.00\nLas Vegas | $18,000.00");
+							break;
+
+						case 'JUNIO': 
+							alert("Cancún | $10,000.00\nDisneylandia | $20,000.00\nIxtapa | $8,000.00\nLas Vegas | $18,000.00");
+							break;
+
+						case 'JULIO': 
+							alert("Cancún | $10,000.00\nDisneylandia | $20,000.00\nIxtapa | $8,000.00\nLas Vegas | $18,000.00");
+							break;
+
+						case 'AGOSTO': 
+							alert("Cancún | $7,000.00\nDisneylandia | $12,000.00\nIxtapa | $5,000.00\nLas Vegas | $12,000.00");
+							break;
+
+						case 'SEPTIEMBRE': 
+							alert("Cancún | $7,000.00\nDisneylandia | $12,000.00\nIxtapa | $5,000.00\nLas Vegas | $12,000.00");
+							break;
+
+						case 'OCTUBRE': 
+							alert("Cancún | $7,000.00\nDisneylandia | $12,000.00\nIxtapa | $5,000.00\nLas Vegas | $12,000.00");
+							break;
+
+						case 'NOVIEMBRE': 
+							alert("Cancún | $7,000.00\nDisneylandia | $12,000.00\nIxtapa | $5,000.00\nLas Vegas | $12,000.00");
+							break;
+
+						case 'DICIEMBRE': 
+							alert("Cancún | $7,000.00\nDisneylandia | $12,000.00\nIxtapa | $5,000.00\nLas Vegas | $12,000.00");
+							break;
+
+						default: alert("Mes introducido incorrectamente");
+							break;
+*/
+					}
+
+				}else{
+
+				}
+				ans=prompt("¿Desea seguir con el proceso?"); //Pregunta otra vez si quiere seguir con las consultas
+				//Se guarda la respuesta en una variable para validar el DO-WHILE si se sigue con el proceso o no
+			}while(ans.toUpperCase() == 'SI');
+
+
+	</script>	
+</body>
+</html>
